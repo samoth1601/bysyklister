@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./station-list.component.scss']
 })
 export class StationListComponent implements OnInit {
-  stations: station[] = []
+  stations: stationInformationData[] = []
   private lastUpdated: any = []
   constructor(private http: HttpClient) {
   }
@@ -24,7 +24,7 @@ export class StationListComponent implements OnInit {
   }
 }
 
-interface  station {
+interface  stationInformationData {
   station_id?: number;
   name?: string;
   address: string;
@@ -33,11 +33,11 @@ interface  station {
   capacity: number;
 }
 
-interface stationsData {
-  stations: station[]
+interface stationsInformationData {
+  stations: stationInformationData[]
 }
 
 export interface StationInformation {
   last_updated?: string;
-  data?:stationsData;
+  data?:stationsInformationData;
 }
