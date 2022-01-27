@@ -1,5 +1,21 @@
-<h1>BysykLister</h1>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="Stativ">
+        <th mat-header-cell *matHeaderCellDef> Stativ </th>
+        <td mat-cell *matCellDef="let station"> {{station.stationName}} </td>
+    </ng-container>
 
-<ul *ngFor="let station of stations">
-    <li>{{station.name}}</li>
-</ul>
+    <ng-container matColumnDef="Ledige sykler">
+        <th mat-header-cell *matHeaderCellDef> Ledige sykler </th>
+        <td mat-cell *matCellDef="let station"> {{station.stationAvailableBikes}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Ledige låser">
+        <th mat-header-cell *matHeaderCellDef> Ledige låser </th>
+        <td mat-cell *matCellDef="let station"> {{station.stationAvailableDocks}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div class="spacer"></div>

@@ -4,6 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { StationListComponent } from './station-list/station-list.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -12,9 +13,11 @@ import { StationListComponent } from './station-list/station-list.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
