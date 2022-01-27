@@ -1,7 +1,8 @@
 # BysykLister
-Listevisning av bysykkelstasjoner og deres tilgjengelige låser og ledige sykler.
+Listevisning av stasjoner fra Oslo Bysykkel og deres tilgjengelige låser og ledige sykler.
+Applikasjonen benytter seg av Oslo Bysykkel sitt åpne API `https://oslobysykkel.no/apne-data/sanntid`.
 
-Prosjektet ble generert ved hjelp av [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+Prosjektet ble generert ved hjelp av [Angular CLI](https://github.com/angular/angular-cli) versjon 13.1.4.
 
 ## Forutsetninger for å kjøre applikasjonen
 * En LTS-versjon av Node : https://nodejs.org/en/
